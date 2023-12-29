@@ -1,0 +1,9 @@
+javascript:(function() {
+  var url = window.location.href;
+  var match = url.match(/twitch.tv\/(\w+)/);
+  if (match && match[1]) {
+    window.open('https://www.twitch.tv/popout/' + match[1] + '/chat', 'TwitchChat', 'width=400,height=600');
+  } else {
+    alert('Not a Twitch stream page.');
+  }
+})();
